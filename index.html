@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Customer List</h1>
+    <table id="customerTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Street</th>
+                <th>House</th>
+                <th>Newsletter</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>Add New Customer</h2>
+    <form id="customerForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="number" id="age" placeholder="Age" required>
+        <input type="text" id="city" placeholder="City" required>
+        <input type="text" id="street" placeholder="Street" required>
+        <input type="number" id="house" placeholder="House" required>
+        <label>
+            Newsletter:
+            <input type="checkbox" id="newsletter">
+        </label>
+        <button type="submit">Add Customer</button>
+    </form>
+
+    <h2>Delete Customer</h2>
+    <form id="deleteForm">
+        <input type="number" id="deleteId" placeholder="Customer ID" required>
+        <button type="submit">Delete Customer</button>
+    </form>
+    <div class="error" id="errorMessage"></div>
+    
+    <h2>Edit Customer</h2>
+    <form id="editCustomerForm" style="display: none;">
+        <input type="hidden" id="editId">
+        <input type="text" id="editName" placeholder="Name" required>
+        <input type="number" id="editAge" placeholder="Age" required>
+        <input type="text" id="editCity" placeholder="City" required>
+        <input type="text" id="editStreet" placeholder="Street" required>
+        <input type="number" id="editHouse" placeholder="House" required>
+        <label>
+            Newsletter:
+            <input type="checkbox" id="editNewsletter">
+        </label>
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
